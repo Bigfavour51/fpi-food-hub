@@ -46,7 +46,7 @@ export default function CheckoutPage() {
 
       clearCart();
       toast.success('Order placed successfully!');
-      router.push(`/order/${trackingId}`);
+      router.push(`/order-success?tracking=${trackingId}`);
     } catch (error) {
       console.error('Checkout error:', error);
       toast.error('Failed to place order. Please try again.');
