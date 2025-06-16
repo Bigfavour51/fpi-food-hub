@@ -76,7 +76,7 @@ export default function CartDrawer() {
               <div className="flex items-center space-x-4">
                 <div className="w-16 h-16 bg-gray-200 rounded-lg overflow-hidden flex-shrink-0">
                   <img
-                    src={item.image_url || '/api/placeholder/64/64'}
+                    src={item.image || '/api/placeholder/64/64'}
                     alt={item.name}
                     className="w-full h-full object-cover"
                   />

@@ -59,3 +59,9 @@ export const getCartTotal = () =>
     .getState()
     .items.reduce((total, item) => total + item.price * item.quantity, 0);
 export const clearCart = () => useCartStore.getState().clearCart();
+
+// Export the missing functions
+export const updateCartItemQuantity = (id: string, quantity: number) => useCartStore.getState().updateQuantity(id, quantity);
+export const removeFromCart = (id: string) => useCartStore.getState().removeItem(id);
+export const addToCart = (item: CartItem) => useCartStore.getState().addItem(item);
+export const getCartItemCount = () => useCartStore.getState().items.reduce((count, item) => count + item.quantity, 0);

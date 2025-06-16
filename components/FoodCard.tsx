@@ -26,7 +26,8 @@ export default function FoodCard({ item }: FoodCardProps) {
       id: item.id,
       name: item.name,
       price: item.price,
-      image_url: item.image_url,
+      image: item.image_url,
+      quantity: 1,
     });
     setQuantity(prev => prev + 1);
     toast.success(`${item.name} added to cart!`);
