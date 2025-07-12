@@ -47,6 +47,7 @@ export interface Order {
   status: 'pending' | 'payment_received' | 'confirmed' | 'preparing' | 'dispatched' | 'delivered' | 'cancelled';
   tracking_id: string;
   customer_note: string;
+  pickup_location?: string; // Added for pickup location
   created_at: string;
   updated_at: string;
 }

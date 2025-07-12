@@ -235,6 +235,12 @@ export default function OrderSuccessPage() {
                     {format(new Date(order.created_at), 'PPp')}
                   </p>
                 </div>
+                {order.pickup_location && (
+                  <div className="col-span-2">
+                    <span className="text-gray-600">Pickup Location:</span>
+                    <p className="font-semibold">{order.pickup_location}</p>
+                  </div>
+                )}
               </div>
             </div>
           </CardContent>
